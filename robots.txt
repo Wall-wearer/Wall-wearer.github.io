@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://wall-wearer.github.ioblank/sitemap.xml
+Sitemap: https://Wall-wearer.github.io/sitemap.xml
