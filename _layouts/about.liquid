@@ -40,12 +40,48 @@ layout: default
 
     <div class="clearfix">{{ content }}</div>
 
-    <!-- News -->
-    {% if page.news and site.announcements.enabled %}
+    <!--list of skill-->
+    <!--for now just do this to reduce the cost of time-->
+    <h2>
+        <a>技能</a>
+    </h2>
+
+    <h4>
+      <a>专业技能</a>
+    </h4>
+    <ul>
+        <li>会用CATIA进行三维建模</li>
+        <li>会使用AutoCAD绘制二维工程图</li>
+        <li>会用如ANSYS 和ADAMS等分析软件</li>
+        <li>会使用如Blender, C4D和Keyshot等3D建模渲染软件</li>
+        <li>会使用Python，C，汇编，Octave和Matlab等编程语言并用Git进行版本控制</li>
+        <li>会使用HTML, CSS制作网站</li>
+        <li>有编写AI进行图形、人脸识别的经验</li>
+        <li>有操作3D打印机，线切割机，车床等设备的经验</li>
+        <li>会使用Altium Designer设计电路板</li>
+        <li>有设计赛车悬架经验</li>
+        <li>有设置服务器的经验</li>
+        <li>有自制IoT设备经验</li>
+        <li>有设计变速箱经验</li>
+        <li>持有完整的英国和中国驾照并有6年驾驶经验</li>
+    </ul>
+
+    <h4>
+      <a>语言技能</a>
+    </h4>
+    <ul>
+    <li>雅思6分</li>
+    <li>全国高校英语专业四级考试（CET-4）</li>
+    </ul>
+
+
+
+    <!-- Skills -->
+    {% if site.skills.enabled %}
       <h2>
-        <a href="{{ '/news/' | relative_url }}" style="color: inherit">news</a>
+        <a href="{{ '/skills/' | relative_url }}" style="color: inherit">技能</a>
       </h2>
-      {% include news.liquid limit=true %}
+      {% include skills.liquid %}
     {% endif %}
 
     <!-- Latest posts -->
@@ -56,19 +92,30 @@ layout: default
       {% include latest_posts.liquid %}
     {% endif %}
 
-    <!-- Selected papers -->
-    {% if page.selected_papers %}
+    <!-- News -->
+    {% if page.news and site.announcements.enabled %}
+      <h2>
+        <a href="{{ '/news/' | relative_url }}" style="color: inherit">news</a>
+      </h2>
+      {% include news.liquid limit=true %}
+    {% endif %}
+
+
+    <!-- Selected papers (cause no one for now)-->
+    {% if page.selected_papers.enabled %}
       <h2>
         <a href="{{ '/publications/' | relative_url }}" style="color: inherit">selected publications</a>
       </h2>
       {% include selected_papers.liquid %}
     {% endif %}
+    
+
 
     <!-- Social -->
     {% if page.social %}
       <div class="social">
         <div class="contact-icons">{% include social.liquid %}</div>
-
+        
         <div class="contact-note">{{ site.contact_note }}</div>
       </div>
     {% endif %}

@@ -1,5 +1,16 @@
 # al-folio
 
+## Important:
+To run the server on local, needs the following things:
+- `cd` to the target index and active the virtual environment by using `source venv/bin/active`
+- run the web server: `bundle exec jekyll serve`.bundle exec jekyll serve
+- anytime when change things except words, need to `control + c` to quiet the web server and restart it.
+
+## `TODO` list
+1. make this web to be a two languages one. Due to the time, I have one language only. Later I want to add a button inside the web and once press the button, switch to another on.
+2. At `about` page, there is one thing that the list of `skills` is input by typing `html` inside the `_layouts/about.liquid`. It could be better to make it as the one like `news` and `lasest_post`.
+
+
 <div align="center">
 
 [![Preview](readme_preview/al-folio-preview.png)](https://alshedivat.github.io/al-folio/)
